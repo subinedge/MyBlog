@@ -6,4 +6,21 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: "Use{THIS}Wisely",
+    author: "Subin"
+  },
+  plugins:[
+    'gatsby-plugin-sass',
+    // this plugin will pull all the files in our project system
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: 'src',
+        path: `${__dirname}/src/`
+      }
+    },
+    // REMARK plugin needed to extract the markdown files and parses
+    'gatsby-transformer-remark'
+  ]
 }

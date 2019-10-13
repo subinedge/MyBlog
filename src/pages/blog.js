@@ -1,17 +1,18 @@
 import React from 'react';
+import {Link, graphql, useStaticQuery} from 'gatsby'
 import Layout from '../components/layout';
-import {graphql, useStaticQuery} from 'gatsby'
+import Head from '../components/head'
+import blogStyles from './blog.module.scss'
 
 const BlogPage = () => {
   const blogHeader = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allContentfulBlogPost (sort: {fields: publishedDate, order: DESC}) {
         edges {
           node {
-            frontmatter {
-              title
-              date
-            }
+            title
+            slug
+            publishedDate(formatString: "MMMM Do, YYYY")
           }
         }
       }
@@ -20,13 +21,18 @@ const BlogPage = () => {
 
   return (
     <Layout>
-      <h1>Recent Blog Posts</h1>
-      <ol>
-        {blogHeader.allMarkdownRemark.edges.map((edge) => {
+      <Head title="Blog"/>
+      <h1 className={blogStyles.header}>Recent Blog Posts</h1>
+      <ol className={blogStyles.posts}>
+        {blogHeader.allContentfulBlogPost.edges.map((edge) => {
           return (
-            <li>
-              <h2>{edge.node.frontmatter.title}</h2>
-              <p>{edge.node.frontmatter.date}</p>
+            <li className={blogStyles.post}>
+              <Link to={`/blog/${edge.node.slug}`}>
+                <h2>{edge.node.title}</h2>
+                {/* <p className={blogStyles.excerpt}>{edge.node.excerpt}</p> */}
+                <p className={blogStyles.date}>{edge.node.publishedDate}</p>
+                {/* <p className={blogStyles.date}>&bull;<span className={blogStyles.space}></span>{edge.node.timeToRead}min Read</p> */}
+              </Link>
             </li>
           )
         })}

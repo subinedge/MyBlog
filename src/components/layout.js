@@ -5,7 +5,7 @@ import Footer from './footer'
 
 import '../styles/index.scss'
 
-import layoutStyles from '../components/layout.module.scss'
+import layoutStyles from './styles/scss/layout.module.scss'
 
 const Layout = (props) => {
   return(

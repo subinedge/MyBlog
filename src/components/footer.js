@@ -1,6 +1,6 @@
 import React from 'react'
 import {graphql, useStaticQuery} from 'gatsby'
-import footerStyles from './footer.module.scss'
+import footerStyles from './styles/scss/footer.module.scss'
 
 const Footer = ()=> {
   const authorName = useStaticQuery(graphql`

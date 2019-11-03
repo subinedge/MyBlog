@@ -18,8 +18,11 @@ const Header = ()=> {
   return (
 
     <header className = {headerStyles.header}>
-      <h1>
-        <Link className = {headerStyles.title} to="/">{siteHeading.site.siteMetadata.title}</Link>
+      <h1 className={headerStyles.heading}>
+        <Link 
+        className = {headerStyles.title} to="/">
+          JSWillRule
+        </Link>
       </h1>
       <nav>
         <ul className = {headerStyles.navList}>

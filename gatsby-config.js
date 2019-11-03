@@ -7,7 +7,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Use{THIS}Wisely",
+    title: "ThinkJavascript",
     author: "Subin"
   },
   plugins:[

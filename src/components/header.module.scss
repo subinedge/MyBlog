@@ -1,17 +1,40 @@
-$nav-active-color:rgb(255, 124, 2);
+// logo font - Sedgwick
+
+// @import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Titan+One&display=swap');
+
+
+$nav-active-color:#6c63ff;
+$nav-color:rgb(15, 63, 57);
+$logo-font: 'Titan One', cursive;
 
 .title {
-  color: #000;
-  font-size: 2.5rem;
+  color: $nav-color;
+  font-size: 1.8rem;
   text-decoration: none;
+  letter-spacing: 2px;
+  margin-left: 10px;
+  font-family: $logo-font;
+  font-weight: 100;
+}
+
+.h1 {
+  display: inline-block;
 }
 
 .header {
   padding: 0 0 3rem;
+  display: flex;
 }
 
 .nav-list {
   display: flex;
+  align-items: center;
+  position: absolute;
+  right: 100px;
+  top: 35px;
+  font-size: 1.1rem;
   list-style-type: none;
   margin: 0;
 }
@@ -19,8 +42,10 @@ $nav-active-color:rgb(255, 124, 2);
 .nav-item {
   margin-right: 1.3rem;
   text-decoration: none;
-  color: rgb(9, 10, 19);
   transition: 0.3s;
+  color: $nav-color;
+  font-family: 'Henny Penny', cursive;
+  font-weight: 900;
 }
 
 .nav-item:hover {
@@ -31,3 +56,6 @@ $nav-active-color:rgb(255, 124, 2);
   color: $nav-active-color;
 }
 
+.logo_secondary {
+  font-family: $logo-font;
+}

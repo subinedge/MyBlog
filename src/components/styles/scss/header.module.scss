@@ -33,13 +33,13 @@ $logo-font: 'Titan One', cursive;
   align-items: center;
   position: absolute;
   right: 100px;
-  top: 35px;
-  font-size: 1.1rem;
+  top: 35px; 
   list-style-type: none;
   margin: 0;
 }
 
 .nav-item {
+  font-size: 1.1rem;
   margin-right: 1.3rem;
   text-decoration: none;
   transition: 0.3s;
@@ -62,4 +62,69 @@ $logo-font: 'Titan One', cursive;
 // MEDIA QUERIES
 
 
+// 1800 to 2200px
+
+@media (min-width: 1800px) and (max-width: 2200px) {
+  // increase font-size of nav items
+  .nav-item {
+    font-size: 1.3rem;
+  }
+
+
+  // bring the navlist inside because of max-width 1400px
+  .nav-list {
+    right: 200px;
+  }
+
+  // bring title inside
+  .title {
+    margin-left: 20px;
+  }
+}
+
+
+// 2201 to 2560px
+
+
+@media (min-width: 2201px) and (max-width: 2560px) {
+  // increase font-size of nav items
+  .nav-item {
+    font-size: 1.6rem;
+  }
+
+
+  // bring the navlist inside because of max-width 1400px
+  .nav-list {
+    right: 300px;
+  }
+
+  // bring title inside
+  .title {
+    margin-left: 30px;
+    font-size: 2rem;
+  }
+}
+
+
+// > 2561px
+
+
+@media (min-width: 2561px) {
+  // increase font-size of nav items
+  .nav-item {
+    font-size: 1.8rem;
+  }
+
+
+  // bring the navlist inside because of max-width 1400px
+  .nav-list {
+    right: 400px;
+  }
+
+  // bring title inside
+  .title {
+    margin-left: 30px;
+    font-size: 2.1rem;
+  }
+}
 

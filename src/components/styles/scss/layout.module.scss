@@ -13,3 +13,26 @@
 .content {
   flex-grow: 1;
 }
+
+
+// MEDIA QUERIES
+
+@media (min-width: 1800px) and (max-width: 2200px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+
+@media (min-width: 2201px) and (max-width: 2560px) {
+  .container {
+    max-width: 1700px;
+  }
+}
+
+
+@media (min-width: 2561px) {
+  .container {
+    max-width: 1800px;
+  }
+}

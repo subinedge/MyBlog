@@ -1,13 +1,11 @@
 // logo font - Sedgwick
 
-// @import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display&display=swap');
-
-@import url('https://fonts.googleapis.com/css?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
 
 
 $nav-active-color:#6c63ff;
 $nav-color:rgb(15, 63, 57);
-$logo-font: 'Titan One', cursive;
+$logo-font: 'Cabin', cursive;
 
 .title {
   color: $nav-color;
@@ -17,10 +15,6 @@ $logo-font: 'Titan One', cursive;
   margin-left: 10px;
   font-family: $logo-font;
   font-weight: 100;
-}
-
-.h1 {
-  display: inline-block;
 }
 
 .header {
@@ -60,6 +54,37 @@ $logo-font: 'Titan One', cursive;
 
 
 // MEDIA QUERIES
+
+
+// < 650px
+
+@media (max-width: 650px) {
+  .heading {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 70px;
+    left:28%;
+  }
+}
+
+
+// < 800px 
+
+@media (max-width: 799px) {
+  .header {
+    padding: 0 0 1rem;
+  }
+
+  .nav-list {
+    right: 50px;
+  }
+
+}
+
 
 
 // 1800 to 2200px

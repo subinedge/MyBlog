@@ -1,5 +1,6 @@
 // header h2 font
-@import url('https://fonts.googleapis.com/css?family=Titan+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Wallpoet&display=swap');
 
 
 .headerBody {
@@ -26,7 +27,7 @@
   }
 
   .headerContent h2{
-    font-family: 'Titan One', cursive;
+    font-family: 'Wallpoet', cursive;
     font-size: 2.3rem;
     font-weight: normal;
   }
@@ -49,6 +50,59 @@
       -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
       box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
       transition: all 0.4s ease 0s;
+    }
+  }
+}
+
+
+
+// MEDIA QUERIES
+
+
+// < 1000px
+
+@media (max-width:1000px) {
+  .headerBody {
+    .headerContent {
+      width: 55%;
+    }
+
+    .imageDiv {
+      width: 45%;
+    }
+
+    .headerContent h2 {
+      font-size: 2rem;
+    }
+  }
+}
+
+
+// < 800px
+
+@media (max-width:800px) {
+  
+  .headerBody {
+    .headerContent {
+      width: 100%;
+      text-align: left;;
+    }
+
+    .imageDiv {
+      display: none;
+    }
+
+    .headerContent h2 {
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+
+    .headerContent p {
+      font-size: 1rem;
+    }
+
+    .cta {
+      padding: 10px;
     }
   }
 }

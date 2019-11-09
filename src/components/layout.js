@@ -41,7 +41,7 @@ class Layout extends React.Component{
           <Header drawClickHandler = {this.drawerToggleClickHandler}/>
           <SideDrawer show={this.state.sideDrawerOpen}/>
           {backdrop}
-          <div style={{marginTop:"80px"}}>
+          <div style={{marginTop:"94px"}}>
             {this.props.children}
           </div>
         </div>

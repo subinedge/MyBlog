@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
 
 
-$nav-active-color:#c54d1d;
+$nav-active-color:#AF732B;
 $nav-font: 'Cabin', cursive;
-$nav-background: rgb(246, 243, 243);
-$logo_menu_color: rgb(75, 73, 68);
+$nav-background: #FAFAFA;
+$logo_menu_color: #0A0A0A;
 
 
 .navBar {
     position: fixed;
     top: 0;
     left: 0;
-    height: 70px;
+    height: 84px;
     width: 100%;
     background: $nav-background;
-    box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+    // box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
 }
 
 .navBar .navBar__navigation {
@@ -31,7 +31,7 @@ $logo_menu_color: rgb(75, 73, 68);
 .navBar__logoLinks {
   color: $logo_menu_color;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-family: $nav-font;
 }
 
@@ -48,13 +48,21 @@ $logo_menu_color: rgb(75, 73, 68);
   & .item{
     color: $logo_menu_color;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: normal;
+    font-size: 0.8rem;
+    letter-spacing: 1.3px;
+    font-weight: 500;
+    line-height: 18px;
     font-family: $nav-font;
+    text-transform: uppercase;
+    transition: color 0.1s ease-in;
+  }
+
+  & .item:hover {
+    color:$nav-active-color;
   }
 
   & li {
-    padding: 0 0.5rem;
+    padding: 0 1.2rem;
   }
 
   & .activeNavItem {

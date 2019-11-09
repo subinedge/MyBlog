@@ -7,26 +7,6 @@ const headerBody = () => {
 
   return(
     <main className={headerBodyStyles.headerBody}>
-      <h1>HeaderBody Component</h1>
-      <h1>HeaderBody Component</h1>
-      <h1>HeaderBody Component</h1>
-      <h1>HeaderBody Component</h1>
-      <h1>HeaderBody Component</h1>
-      <h1>HeaderBody Component</h1>
-      <h1>HeaderBody Component</h1>
-      <h1>HeaderBody Component</h1>
-      <h1>HeaderBody Component</h1>
-      <h1>HeaderBody Component</h1>
-      <h1>HeaderBody Component</h1>
-      <h1>HeaderBody Component</h1>
-      <h1>HeaderBody Component</h1>
-      <h1>HeaderBody Component</h1>
-      <h1>HeaderBody Component</h1>
-      <h1>HeaderBody Component</h1>
-      <h1>HeaderBody Component</h1>
-      <h1>HeaderBody Component</h1>
-      <h1>HeaderBody Component</h1>
-      <h1>HeaderBody Component</h1>
     </main>
   );
 }

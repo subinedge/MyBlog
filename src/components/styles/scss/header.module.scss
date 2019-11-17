@@ -1,20 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Cabin&display=swap");
 
-
-$nav-active-color:#AF732B;
-$nav-font: 'Cabin', cursive;
-$nav-background: #FAFAFA;
-$logo_menu_color: #0A0A0A;
-
+$nav-active-color: #af732b;
+$nav-font: "Cabin", cursive;
+$nav-background: #fafafa;
+$logo_menu_color: #0a0a0a;
 
 .navBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 84px;
-    width: 100%;
-    background: $nav-background;
-    // box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 84px;
+  width: 100%;
+  background: $nav-background;
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.1);
 }
 
 .navBar .navBar__navigation {
@@ -45,7 +43,7 @@ $logo_menu_color: #0A0A0A;
   padding: 0;
   display: flex;
 
-  & .item{
+  & .item {
     color: $logo_menu_color;
     text-decoration: none;
     font-size: 0.8rem;
@@ -58,7 +56,7 @@ $logo_menu_color: #0A0A0A;
   }
 
   & .item:hover {
-    color:$nav-active-color;
+    color: $nav-active-color;
   }
 
   & li {
@@ -70,43 +68,13 @@ $logo_menu_color: #0A0A0A;
   }
 }
 
-
-
-
 // Media queries
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .navBar__navigationItems {
     display: none;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // .title {
 //   color: $nav-color;
@@ -128,7 +96,7 @@ $logo_menu_color: #0A0A0A;
 //   align-items: center;
 //   position: absolute;
 //   right: 100px;
-//   top: 35px; 
+//   top: 35px;
 //   list-style-type: none;
 //   margin: 0;
 // }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, graphql, useStaticQuery} from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 import Layout from '../components/layout';
 import Head from '../components/head'
 import blogStyles from './blog.module.scss'
@@ -21,8 +21,8 @@ const BlogPage = () => {
 
   return (
     <Layout>
-      <Head title="Blog"/>
-      <h1 className={blogStyles.header}>Recent Blog Posts</h1>
+      <Head title="Blog" />
+      <h1 className={blogStyles.header}>My Blog Posts</h1>
       <ol className={blogStyles.posts}>
         {blogHeader.allContentfulBlogPost.edges.map((edge) => {
           return (
@@ -33,6 +33,7 @@ const BlogPage = () => {
                 <p className={blogStyles.date}>{edge.node.publishedDate}</p>
                 {/* <p className={blogStyles.date}>&bull;<span className={blogStyles.space}></span>{edge.node.timeToRead}min Read</p> */}
               </Link>
+              <div className={blogStyles.divider}></div>
             </li>
           )
         })}

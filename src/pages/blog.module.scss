@@ -1,12 +1,9 @@
-$dateExcerpt: rgb(61, 61, 61);
-$blogFont: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
-  Arial, sans-serif;
+$dateExcerpt : rgb(61, 61, 61);
+$blogFont: sans-serif;
 
 .header {
   font-size: 1.8rem;
   font-family: $blogFont;
-  text-align: center;
-  margin: 1rem;
 }
 
 .posts {
@@ -19,8 +16,7 @@ $blogFont: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans"
 
   a {
     // box-shadow: -1px 6px 5px rgba(0,0,0,0.44);
-    background-color: #fafafa;
-    border-left: 10px solid rgb(93, 93, 93);
+    background-color: whitesmoke;
     color: rgba(0, 0, 0, 0.84);
     font-weight: 600;
     display: block;
@@ -30,22 +26,22 @@ $blogFont: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans"
 
     h2 {
       font-size: 1.3rem;
-      font-family: $blogFont;
+      font-family: sans-serif;
     }
 
-    // .excerpt {
-    //   color: $dateExcerpt;
-    // }
+    .excerpt {
+      color: $dateExcerpt;
+    }
 
     .date {
-      color: $dateExcerpt;
+      color:$dateExcerpt;
       display: inline-block;
       padding-right: 10px;
     }
 
-    // .space {
-    //   padding-right: 10px;
-    // }
+    .space {
+      padding-right: 10px;
+    }
 
     p {
       font-weight: normal;
@@ -53,10 +49,5 @@ $blogFont: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans"
       font-family: sans-serif;
       font-style: italic;
     }
-  }
-  .divider {
-    width: auto;
-    height: 1px;
-    background-color: grey;
   }
 }

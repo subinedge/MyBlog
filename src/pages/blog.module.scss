@@ -1,4 +1,4 @@
-$dateExcerpt : rgb(61, 61, 61);
+$dateExcerpt: rgb(61, 61, 61);
 $blogFont: sans-serif;
 
 .header {
@@ -8,7 +8,8 @@ $blogFont: sans-serif;
 
 .posts {
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 750px;
 }
 
 .post {
@@ -34,7 +35,7 @@ $blogFont: sans-serif;
     }
 
     .date {
-      color:$dateExcerpt;
+      color: $dateExcerpt;
       display: inline-block;
       padding-right: 10px;
     }

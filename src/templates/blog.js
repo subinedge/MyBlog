@@ -1,8 +1,8 @@
-import React from 'react'
-import {graphql} from 'gatsby'
-import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
-import Layout from '../components/layout'
-import Head from '../components/head'
+import React from "react"
+import { graphql } from "gatsby"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import Layout from "../components/layout"
+import Head from "../components/head"
 
 // export const query = graphql`
 // query (
@@ -24,9 +24,9 @@ import Head from '../components/head'
 // }
 // `
 
-export const query = graphql `
+export const query = graphql`
   query($slug: String!) {
-    contentfulBlogPost(slug: {eq:$slug}) {
+    contentfulBlogPost(slug: { eq: $slug }) {
       title
       publishedDate(formatString: "MMMM Do, YYYY")
       body {
@@ -36,24 +36,20 @@ export const query = graphql `
   }
 `
 
-  
-
-
-const Blog = (props)=> {
-
+const Blog = props => {
   const options = {
     renderNode: {
-      "embedded-asset-block" : (node) => {
-        const alt = node.data.target.fields.title['en-US'];
-        const url = node.data.target.fields.file['en-US'].url;
-        return <img alt={alt} src={url}/>
-      }
-    }
+      embeddedAssetBlock: node => {
+        const alt = node.data.target.fields.title["en-US"]
+        const url = node.data.target.fields.file["en-US"].url
+        return <img alt={alt} src={url} />
+      },
+    },
   }
 
-  return(
+  return (
     <Layout>
-      <Head title={props.data.contentfulBlogPost.title}/>
+      <Head title={props.data.contentfulBlogPost.title} />
       {/* <h1>{props.data.markdownRemark.frontmatter.title}</h1>
       <p>{props.data.markdownRemark.frontmatter.date}</p>
 
@@ -62,9 +58,12 @@ const Blog = (props)=> {
       <h1>{props.data.contentfulBlogPost.title}</h1>
       <p>{props.data.contentfulBlogPost.publishedDate}</p>
       {/* for outputting the body in the contentful site, we need a library specifically made for react..  @contentful/rich-text-react-renderer*/}
-      {documentToReactComponents(props.data.contentfulBlogPost.body.json, options)}
+      {documentToReactComponents(
+        props.data.contentfulBlogPost.body.json,
+        options
+      )}
     </Layout>
   )
-} 
+}
 
-export default Blog;
+export default Blog

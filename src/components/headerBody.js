@@ -1,14 +1,8 @@
 import React from "react"
-import {Link} from 'gatsby'
-import headerBodyStyles from './styles/scss/headerBody.module.scss'
-import header_hero from '../assets/header_hero.svg'
+import headerBodyStyles from "./styles/scss/headerBody.module.scss"
 
 const headerBody = () => {
-
-  return(
-    <main className={headerBodyStyles.headerBody}>
-    </main>
-  );
+  return <main className={headerBodyStyles.headerBody}></main>
 }
 
-export default headerBody;
+export default headerBody

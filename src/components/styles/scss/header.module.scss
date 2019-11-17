@@ -1,20 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Cabin&display=swap");
 
-
-$nav-active-color:#AF732B;
-$nav-font: 'Cabin', cursive;
-$nav-background: #FAFAFA;
-$logo_menu_color: #0A0A0A;
-
+$nav-active-color: #af732b;
+$nav-font: "Cabin", cursive;
+$nav-background: #fafafa;
 
 .navBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 84px;
-    width: 100%;
-    background: $nav-background;
-    // box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 84px;
+  width: 100%;
+  background: $nav-background;
+  // box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
 }
 
 .navBar .navBar__navigation {
@@ -26,13 +23,11 @@ $logo_menu_color: #0A0A0A;
 
 .navBar__logo {
   margin-left: 1rem;
-}
 
-.navBar__logoLinks {
-  color: $logo_menu_color;
-  text-decoration: none;
-  font-size: 1.7rem;
-  font-family: $nav-font;
+  .logo {
+    width: 280px;
+    height: 30px;
+  }
 }
 
 .spacer {
@@ -45,8 +40,8 @@ $logo_menu_color: #0A0A0A;
   padding: 0;
   display: flex;
 
-  & .item{
-    color: $logo_menu_color;
+  & .item {
+    color: #000000;
     text-decoration: none;
     font-size: 0.8rem;
     letter-spacing: 1.3px;
@@ -58,7 +53,7 @@ $logo_menu_color: #0A0A0A;
   }
 
   & .item:hover {
-    color:$nav-active-color;
+    color: $nav-active-color;
   }
 
   & li {
@@ -70,75 +65,16 @@ $logo_menu_color: #0A0A0A;
   }
 }
 
-
-
-
 // Media queries
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .navBar__navigationItems {
     display: none;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .title {
-//   color: $nav-color;
-//   font-size: 1.8rem;
-//   text-decoration: none;
-//   letter-spacing: 2px;
-//   margin-left: 10px;
-//   font-family: $logo-font;
-//   font-weight: 100;
-// }
-
-// .header {
-//   padding: 0 0 3rem;
-//   display: flex;
-// }
-
-// .nav-list {
-//   display: flex;
-//   align-items: center;
-//   position: absolute;
-//   right: 100px;
-//   top: 35px; 
-//   list-style-type: none;
-//   margin: 0;
-// }
-
-// .nav-item {
-//   font-size: 1.1rem;
-//   margin-right: 1.3rem;
-//   text-decoration: none;
-//   transition: 0.3s;
-//   color: $nav-color;
-//   font-family: 'Henny Penny', cursive;
-//   font-weight: 900;
-// }
+@media (min-width: 769px) {
+  .navBar__logo {
+    margin-left: 0;
+  }
+}

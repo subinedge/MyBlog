@@ -1,13 +1,13 @@
-import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import Layout from "../components/layout"
-import Head from "../components/head"
-import blogStyles from "./blog.module.scss"
+import React from 'react';
+import {Link, graphql, useStaticQuery} from 'gatsby'
+import Layout from '../components/layout';
+import Head from '../components/head'
+import blogStyles from './blog.module.scss'
 
 const BlogPage = () => {
   const blogHeader = useStaticQuery(graphql`
     query {
-      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+      allContentfulBlogPost (sort: {fields: publishedDate, order: DESC}) {
         edges {
           node {
             title
@@ -21,10 +21,10 @@ const BlogPage = () => {
 
   return (
     <Layout>
-      <Head title="Blog" />
-      <h1 className={blogStyles.header}>Blog Posts</h1>
+      <Head title="Blog"/>
+      <h1 className={blogStyles.header}>Recent Blog Posts</h1>
       <ol className={blogStyles.posts}>
-        {blogHeader.allContentfulBlogPost.edges.map(edge => {
+        {blogHeader.allContentfulBlogPost.edges.map((edge) => {
           return (
             <li className={blogStyles.post}>
               <Link to={`/blog/${edge.node.slug}`}>
@@ -41,4 +41,4 @@ const BlogPage = () => {
   )
 }
 
-export default BlogPage
+export default BlogPage;
